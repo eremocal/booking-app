@@ -21,3 +21,14 @@ export function createSearchParams(data: {
     children: data.children.toString(),
   });
 }
+
+export function formatGuestCount(adults: number, children: number): string {
+  const adultText = adults === 1 ? 'adult' : 'adults';
+  const childText = children === 1 ? 'child' : 'children';
+
+  if (children === 0) {
+    return `${adults} ${adultText}`;
+  }
+
+  return `${adults} ${adultText}, ${children} ${childText}`;
+}
