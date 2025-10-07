@@ -1,0 +1,11 @@
+node_modules
+
+# next.js
+/.next/
+/out/
+
+# misc
+.DS_Store
+*.pem
+
+pnpm-lock.yaml
