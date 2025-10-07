@@ -4,6 +4,30 @@
   --font-sans: var(--font-open-sans);
 }
 
+@layer components {
+  .fluid-width {
+    @media (min-width: 640px) {
+      width: clamp(
+        438px,
+        calc(438px + (680px - 438px) * ((100vw - 640px) / (1024px - 640px))),
+        680px
+      );
+    }
+
+    @media (min-width: 1024px) {
+      width: clamp(
+        680px,
+        calc(680px + (909px - 680px) * ((100vw - 1024px) / (1280px - 1024px))),
+        909px
+      );
+    }
+
+    @media (min-width: 1280px) {
+      width: 909px;
+    }
+  }
+}
+
 body {
   font-family: var(--font-open-sans), Arial, sans-serif;
 }

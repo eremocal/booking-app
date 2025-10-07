@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
 import { format } from 'date-fns';
@@ -141,6 +142,19 @@ export default function Home() {
               </button>
             </form>
           </div>
+        </div>
+
+        <div className="fluid-width hidden sm:absolute sm:top-1/2 sm:right-8 sm:block sm:h-[680px] sm:-translate-y-1/2 lg:right-[10%]">
+          <Image
+            src="/hotels.jpg"
+            alt="Hotels"
+            fill
+            className="rounded-3xl object-cover"
+          />
+        </div>
+
+        <div className="absolute right-0 bottom-0 left-0 h-[520px] rounded-3xl sm:hidden">
+          <Image src="/hotels.jpg" alt="Hotels" fill className="object-cover" />
         </div>
       </div>
     </div>
